@@ -12,18 +12,20 @@ module.exports = app => {
   )
 
   //if user authenticated, user is redirected here
-  //and we have access to a code from google
-  // so we can get info from persons google profile
+  //passport middlewars takes over and passes request to arrow funcion (req, res)
+  //and we can redirect user back to the react application
   app.get("/auth/google/callback", passport.authenticate("google"), (req, res) => {
-    res.send("hello")
+    res.redirect("/surveys")
   })
 
+  //passport automatically puts the logged on user onto req.user
+  //so this is why we have access to it
   app.get("/api/current_user", (req, res) => {
     res.send(req.user)
   })
 
   app.get("/api/logout", (req, res) => {
     req.logout()
-    res.send(req.user)
+    res.redirect("/")
   })
 }
