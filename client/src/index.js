@@ -6,6 +6,8 @@ import { createStore, applyMiddleware } from "redux"
 import reduxThunk from "redux-thunk"
 import App from "./components/App"
 import reducers from "./reducers"
+import axios from "axios"
+window.axios = axios
 
 //REMEMBER TO REGISTER reducers or
 // if none yet just use this:  () => []
