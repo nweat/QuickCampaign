@@ -1,0 +1,56 @@
+.header {
+  height: 40vh; /*should be 95% of viewport height */
+  background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark), url("/header.jpg");
+  background-size: cover;
+  background-position: right;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative; /*reference used by .logo-box absolute value */
+
+  h1 {
+    line-height: 100%;
+  }
+
+  li {
+    font-size: 1.3rem;
+    display: inline-block;
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .notification-badge {
+    position: relative;
+    right: -40px;
+    /*top: 8px;*/
+    color: $color-white;
+    background-color: #ff0505;
+    margin: 0 -0.8em;
+    border-radius: 50%;
+    padding: 5px 7px;
+    text-align: center;
+  }
+
+  .heading-icon {
+    padding: 1rem;
+    color: $color-white;
+  }
+
+  .heading-icon:hover {
+    opacity: 0.7;
+  }
+}

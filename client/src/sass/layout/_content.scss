@@ -1,0 +1,33 @@
+.card-content {
+  p {
+    font-size: 1.3rem;
+  }
+  .card-title {
+    color: $color-black;
+  }
+  #body {
+    color: $color-content-black;
+  }
+}
+
+.card-action {
+  #yes {
+    font-size: 1.5rem;
+    border-radius: 50%;
+    padding: 5px 10px;
+    background-color: #0eb97a;
+  }
+
+  #no {
+    font-size: 1.5rem;
+    border-radius: 50%;
+    padding: 5px 10px;
+    background-color: #f9a4a4;
+  }
+
+  .text {
+    font-size: 1.3rem;
+    color: $color-black;
+    margin-right: 1rem;
+  }
+}

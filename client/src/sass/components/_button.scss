@@ -1,0 +1,66 @@
+.button {
+  &:link,
+  &:visited {
+    display: inline-block;
+    /* since this is an inline element it is treated as text and 
+  text-align: center in .text-box can be used to center it */
+    /*text-transform: uppercase;*/
+    text-decoration: none;
+    padding: 5px 5px;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+    /* animation performed between two states, use keyframe for
+  more control */
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &--white {
+    background-color: #fff;
+    color: #777;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    /* position in relation to .btn */
+    top: 0;
+    left: 0;
+    z-index: -1; /* defines the position of the element 
+  so this element appears at the back of the .btn */
+    transition: all 0.4s;
+  }
+
+  &--white::after {
+    background-color: #fff;
+  }
+
+  &:hover::after {
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75;
+    animation-fill-mode: backwards;
+    /* automatically apply styles before animation starts */
+  }
+}

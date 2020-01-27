@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 import Payments from "./Payments"
+import "../sass/main.scss"
 
 class Header extends React.Component {
   renderContent() {
@@ -12,19 +13,20 @@ class Header extends React.Component {
       case false:
         return (
           <li>
-            <a href="/auth/google">Login with Google</a>
+            <a href="/auth/google">
+              <i className="material-icons heading-icon">account_circle</i>
+            </a>
           </li>
         )
       default:
         return [
           <li key="1">
-            <Payments />
+            <Payments credits={this.props.auth.credits} />
           </li>,
-          <li key="2" style={{ margin: "0 10px" }}>
-            Credits: {this.props.auth.credits}
-          </li>,
-          <li key="3">
-            <a href="/api/logout">Logout</a>
+          <li key="2">
+            <a href="/api/logout">
+              <i className="material-icons heading-icon">exit_to_app</i>
+            </a>
           </li>
         ]
     }
@@ -32,14 +34,24 @@ class Header extends React.Component {
 
   render() {
     return (
-      <nav>
-        <div className="nav-wrapper">
-          <Link to={this.props.auth ? "/surveys" : "/"} className="left brand-logo">
-            Emaily
+      <header className="header">
+        <ul className="right">{this.renderContent()}</ul>
+
+        <div className="header__logo-box">
+          <Link to={this.props.auth ? "/surveys" : "/"}>
+            <img className="header__logo" src="logo.png"></img>
           </Link>
-          <ul className="right">{this.renderContent()}</ul>
         </div>
-      </nav>
+
+        <div className="header__text-box">
+          <h1 className="heading-primary">
+            <span className="heading-primary--main">QuikCampaign</span>
+            <span className="heading-primary--sub">
+              <span className="heading-primary--sub--text">Get Feedback Fast</span>
+            </span>
+          </h1>
+        </div>
+      </header>
     )
   }
 }

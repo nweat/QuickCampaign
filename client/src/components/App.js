@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="container">
+        <div>
           <Header />
           <Route path="/" component={Landing} exact />
           <Route path="/surveys" component={Dashboard} exact />

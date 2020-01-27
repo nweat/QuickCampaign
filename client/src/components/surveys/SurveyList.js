@@ -1,6 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { fetchSurveys } from "../../actions/index"
+import "../../sass/main.scss"
 
 class SurveyList extends React.Component {
   componentDidMount() {
@@ -13,12 +14,22 @@ class SurveyList extends React.Component {
         <div className="card darken-1" key={survey._id}>
           <div className="card-content">
             <span className="card-title">{survey.title}</span>
-            <p>{survey.body}</p>
+            <p id="body">{survey.body}</p>
             <p className="right">Sent On: {new Date(survey.dateSent).toLocaleDateString()}</p>
           </div>
           <div className="card-action">
-            <a>Yes: {survey.yes}</a>
-            <a>No: {survey.no}</a>
+            <a>
+              <span className="text">Yes</span>
+              <span class="white-text" id="yes">
+                {survey.yes}
+              </span>
+            </a>
+            <a>
+              <span className="text">No</span>
+              <span class="white-text" id="no">
+                {survey.no}
+              </span>
+            </a>
           </div>
         </div>
       )
