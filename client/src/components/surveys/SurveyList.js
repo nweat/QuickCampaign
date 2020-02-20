@@ -20,13 +20,13 @@ class SurveyList extends React.Component {
           <div className="card-action">
             <a>
               <span className="text">Yes</span>
-              <span class="white-text" id="yes">
+              <span className="white-text" id="yes">
                 {survey.yes}
               </span>
             </a>
             <a>
               <span className="text">No</span>
-              <span class="white-text" id="no">
+              <span className="white-text" id="no">
                 {survey.no}
               </span>
             </a>

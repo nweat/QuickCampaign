@@ -6,7 +6,7 @@ import "../sass/main.scss"
 
 class Header extends React.Component {
   renderContent() {
-    console.log(this.props)
+    //console.log(this.props)
     switch (this.props.auth) {
       case null:
         return
@@ -45,7 +45,7 @@ class Header extends React.Component {
 
         <div className="header__text-box">
           <h1 className="heading-primary">
-            <span className="heading-primary--main">QuikCampaign</span>
+            <span className="heading-primary--main">QuickCampaign</span>
             <span className="heading-primary--sub">
               <span className="heading-primary--sub--text">Get Feedback Fast</span>
             </span>

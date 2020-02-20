@@ -1,25 +1,16 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
-@import "base/typography";
 @import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-@import "layout/header";
-@import "layout/content";
+@import "components/feature-box";
 @import "components/button";
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
+@import "layout/header";
+@import "layout/grid";
 
-html {
-  //this defines what 1rem is
-  font-size: 62.5%;
-}
-
-body {
-  box-sizing: border-box; /* box model remove box*/
-}
+@import "pages/content";
+@import "pages/landing";

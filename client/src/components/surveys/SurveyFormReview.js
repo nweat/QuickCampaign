@@ -8,15 +8,15 @@ import * as actions from "../../actions/index"
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
   const reviewFields = _.map(formFields, ({ name, label }) => {
     return (
-      <div key={name}>
+      <div key={name} id="formFieldsReview">
         <label>{label}</label>
-        <div>{formValues[name]}</div>
+        <div id="value">{formValues[name]}</div>
       </div>
     )
   })
 
   return (
-    <div>
+    <div id="confirmationScreen">
       <h1>Please confirm entries </h1>
       <div>{reviewFields}</div>
       <button className="yellow darken-3 white-text btn-flat" onClick={onCancel}>

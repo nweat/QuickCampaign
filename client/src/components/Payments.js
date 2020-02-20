@@ -15,7 +15,7 @@ class Payments extends React.Component {
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
       >
         <a href="#">
-          <small class="notification-badge">{this.props.credits}</small>
+          <small className="notification-badge">{this.props.credits}</small>
           <i className="material-icons heading-icon">shopping_basket</i>
         </a>
       </StripeCheckout>
