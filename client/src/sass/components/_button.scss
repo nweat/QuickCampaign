@@ -1,36 +1,53 @@
-.button {
+.btn {
+  &,
   &:link,
   &:visited {
-    display: inline-block;
-    /* since this is an inline element it is treated as text and 
-  text-align: center in .text-box can be used to center it */
-    /*text-transform: uppercase;*/
+    text-transform: uppercase;
     text-decoration: none;
-    padding: 5px 5px;
-    border-radius: 100px;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
-    /* animation performed between two states, use keyframe for
-  more control */
+    font-size: $default-font-size;
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
   &--white {
-    background-color: #fff;
-    color: #777;
-    opacity: 0.8;
+    background-color: $color-white;
+    color: $color-grey-dark;
 
-    &:hover {
-      opacity: 1;
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
     }
   }
 
@@ -39,28 +56,41 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
-    /* position in relation to .btn */
     top: 0;
     left: 0;
-    z-index: -1; /* defines the position of the element 
-  so this element appears at the back of the .btn */
+    z-index: -1;
     transition: all 0.4s;
   }
 
-  &--white::after {
-    background-color: #fff;
-  }
-
-  &:hover::after {
-    transform: scaleX(1.5) scaleY(1.6);
-    opacity: 0;
-  }
-
   &--animated {
-    animation: moveInBottom 0.5s ease-out 0.75;
+    animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
-    /* automatically apply styles before animation starts */
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0);
   }
 }

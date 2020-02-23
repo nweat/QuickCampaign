@@ -1,7 +1,12 @@
 .section-about {
   background-color: $color-grey-light-1;
-  padding: 25rem 0;
-  margin-top: -38vh;
+  padding: 22rem 0;
+  margin-top: -40vh;
+
+  .text {
+    font-size: $default-font-size;
+    color: $color-black-2;
+  }
 
   @include respond(tab-port) {
     padding: 20rem 0;
@@ -15,10 +20,10 @@
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.5), rgba($color-primary-dark, 0.5)), url(/header.jpg);
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.5), rgba($color-primary-dark, 0.5)), url(/features.jpg);
   background-size: cover;
   transform: skewY(-7deg);
-  margin-top: -25vh;
+  margin-top: -30vh;
 
   & > * {
     transform: skewY(7deg);
