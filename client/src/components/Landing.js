@@ -7,26 +7,26 @@ const Landing = () => {
       <main>
         <section className="section-about">
           <div className="u-center-text u-margin-bottom-medium">
-            <h2 className="heading-secondary">Creating a campaign has never been easier</h2>
+            <h2 className="heading-secondary">Creating and managing campaigns has never been easier</h2>
           </div>
 
           <div className="row">
             <div className="col-1-of-3">
               <div className="u-center-text u-margin-bottom-medium">
                 <i className="feature-box__icon icon-basic-todolist-pen"></i>
-                <span className="text"> Create </span>
+                <div className="text">Create a Campaign </div>
               </div>
             </div>
             <div className="col-1-of-3">
               <div className="u-center-text u-margin-bottom-medium">
                 <i className="feature-box__icon icon-basic-paperplane"></i>
-                <span className="text">Send </span>
+                <div className="text">Send to your clients </div>
               </div>
             </div>
             <div className="col-1-of-4">
               <div className="u-center-text u-margin-bottom-medium">
                 <i className="feature-box__icon icon-basic-sheet-multiple"></i>
-                <span className="text"> Feedback </span>
+                <div className="text"> visualize client feedback</div>
               </div>
             </div>
 

@@ -1,8 +1,8 @@
 .header {
   height: 60vh; /*should be 95% of viewport height */
-  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark), url("/header.jpg");
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark), url("/features.jpg");
   background-size: cover;
-  background-position: right;
+  background-position: top;
   position: relative; /*reference used by .logo-box absolute value */
 
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
@@ -14,7 +14,7 @@
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
     only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
     only screen and (min-width: 125em) {
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url("/header.jpg");
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url("/features.jpg");
   }
 
   @include respond(phone) {

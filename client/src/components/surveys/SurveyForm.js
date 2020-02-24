@@ -19,7 +19,7 @@ class SurveyForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ padding: "20px" }}>
         {/* call "onSurveySubmit" only until form is submitted*/}
         <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
           {this.renderFields()}

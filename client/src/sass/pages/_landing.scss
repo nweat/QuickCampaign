@@ -6,6 +6,9 @@
   .text {
     font-size: $default-font-size;
     color: $color-black-2;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
   }
 
   @include respond(tab-port) {
@@ -20,7 +23,7 @@
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.5), rgba($color-primary-dark, 0.5)), url(/features.jpg);
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.5), rgba($color-primary-dark, 0.5)), url(/header.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -30vh;
